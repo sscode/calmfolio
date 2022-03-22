@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Button, Form, Icon, Input } from "semantic-ui-react";
+import { Button, Form} from "semantic-ui-react";
 import { useSelector } from "react-redux";
 import { fetchData } from "../../../app/api/dataApi";
 import { updatePrices } from "./stockActions";
-import { collection, addDoc, setDoc, doc } from "firebase/firestore"
+import { collection, setDoc, doc } from "firebase/firestore"
 import { db } from "../../../app/config/firebase";
 
 
@@ -14,7 +14,6 @@ export default function StockBar() {
     const [numValues, setNumValues] = useState("")
     const user = useSelector(state => state.user.user.user.uid);
     const dispatch = useDispatch()
-    const collectionRef = collection(db, "stocks")
 
     function handleInputChange(e) {
         const {value} = e.target

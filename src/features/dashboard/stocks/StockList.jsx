@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
-import { Button, Menu, Table, TableFooter} from "semantic-ui-react";
+import React from "react";
+import { Table} from "semantic-ui-react";
 import { fetchData } from "../../../app/api/dataApi";
 import StockItem from "./Stocks";
 import { useDispatch, useSelector } from "react-redux";
