@@ -1,0 +1,3 @@
+export const UPDATE_PRICES = 'UPDATE_PRICES';
+export const DELETE_STOCK = 'DELETE_STOCK';
+export const CLEAR_STOCK = 'CLEAR_STOCK';
