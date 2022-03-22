@@ -1,24 +1,18 @@
 import React, { useState } from "react"
-import {createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
-    onAuthStateChanged, signOut } from "firebase/auth"
+import {createUserWithEmailAndPassword} from "firebase/auth"
 import {auth} from "../../app/config/firebase.js"
 import { Button } from "semantic-ui-react"
 import { useHistory } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { updateUser } from "./userActions.js"
-import { useLocation } from "react-router-dom"
 
 
 export default function UserPageRegister() {
 
     const disptach = useDispatch()
-    const history = useHistory();
 
     const [registerEmail, setRegisterEmail] = useState("")
     const [registerPassowrd, setRegisterPassword] = useState("")
-    const [loginEmail, setLoginEmail] = useState("")
-    const [loginPassword, setLoginPassword] = useState("")
 
     //auth
     const register = async () => {
