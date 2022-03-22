@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import {createUserWithEmailAndPassword} from "firebase/auth"
 import {auth} from "../../app/config/firebase.js"
 import { Button } from "semantic-ui-react"
-import { useHistory } from "react-router-dom"
+// import { useHistory } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { updateUser } from "./userActions.js"
 
