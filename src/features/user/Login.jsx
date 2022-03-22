@@ -4,14 +4,14 @@ import {auth} from "../../app/config/firebase.js"
 import { Button } from "semantic-ui-react"
 import { useDispatch } from "react-redux"
 import { updateUser } from "./userActions.js"
-import { useSelector } from "react-redux"
+// import { useSelector } from "react-redux"
 
 
 export default function UserPageLogin() {
 
     const dispatch = useDispatch()
 
-    const user = useSelector(state => state.user.user.user)
+    // const user = useSelector(state => state.user.user.user)
     const [loginEmail, setLoginEmail] = useState("")
     const [loginPassword, setLoginPassword] = useState("")
 

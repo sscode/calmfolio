@@ -8,15 +8,15 @@ import {getAuth} from 'firebase/auth'
 
 
 // Your web app's Firebase configuration
-const {REACT_APP_FIREBASE_API, REACT_APP_FIREBASE_APP} = process.env;
+// const REACT_APP_FIREBASE_API = process.env;
 
 const firebaseConfig = {
-  apiKey: REACT_APP_FIREBASE_API,
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "calmfolio.firebaseapp.com",
   projectId: "calmfolio",
   storageBucket: "calmfolio.appspot.com",
   messagingSenderId: "738556881782",
-  appId: REACT_APP_FIREBASE_APP
+  appId: process.env.REACT_APP_FIREBASE_APP
 };
 
 // Initialize Firebase

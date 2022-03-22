@@ -4,7 +4,7 @@ import { Button, Form} from "semantic-ui-react";
 import { useSelector } from "react-redux";
 import { fetchData } from "../../../app/api/dataApi";
 import { updatePrices } from "./stockActions";
-import { collection, setDoc, doc } from "firebase/firestore"
+import { setDoc, doc } from "firebase/firestore"
 import { db } from "../../../app/config/firebase";
 
 
