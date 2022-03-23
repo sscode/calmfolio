@@ -33,7 +33,7 @@ export default function NavBar() {
                 calmfolio
                 </Menu.Item>
                 {user ? 
-                
+                    //if logged in
                     <Menu.Item position='right'>
                         <Button inverted className="logout" name="logout" onClick={logout}>logout</Button>
                     </Menu.Item>
@@ -41,24 +41,28 @@ export default function NavBar() {
                 :
                 <>
                 <Menu.Item>
-                    {active ? <UserPageLogin />
-                    : <UserPageRegister />}
+                    {active ? 
+                    <>
+                    <UserPageLogin />
+                    <Button className="ui button" onClick={() => activeHandler()}>register</Button>
+                    
+                    </>
+                    : 
+                    <>
+                    <UserPageRegister />
+                    <Button className="ui button" onClick={() => activeHandler()}>login</Button>
+                    
+                    </>
+                    }
                 </Menu.Item>
-                    <div class="ui buttons">
                         {active ?
                             <>
-                                <button className="ui button active">Login</button>
-                                    <div class="or"></div>
-                                <button className="ui button" onClick={() => activeHandler()}>Register</button>
                             </> 
                             :
                             <>
-                            <button className="ui button" onClick={() => activeHandler()}>Login</button>
-                                <div class="or"></div>
-                            <button className="ui button active">Register</button>
                             </> 
                         }
-                    </div>
+                    
                 </> 
                 }
             </Container>

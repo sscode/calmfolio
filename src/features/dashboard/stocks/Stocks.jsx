@@ -25,7 +25,7 @@ export default function StockItem({stock}) {
             <Table.Cell>{stock.qty}</Table.Cell>
             <Table.Cell>${(Math.round(stock.close * stock.qty)).toLocaleString()} </Table.Cell>
             <Table.Cell>
-                <Button value={stock.ticker} onClick={(e) => deleteHandler(e.target.value)}>Delete</Button>
+                <Button className='delete' value={stock.ticker} onClick={(e) => deleteHandler(e.target.value)}>x</Button>
             </Table.Cell>
         </Table.Row>
         </>
