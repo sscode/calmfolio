@@ -33,7 +33,7 @@ export default function UserPageLogin() {
             <div className="login-nav">
                 <input type="text" placeholder="login email" onChange={(e) => setLoginEmail(e.target.value)}/>
                 <input type="text" placeholder="login password" onChange={(e) => setLoginPassword(e.target.value)}/>
-                <Button inverted name="login" onClick={login}>login</Button>
+                <Button className="ui button on" name="login" onClick={login}>login</Button>
             </div>
         
     )

@@ -33,7 +33,7 @@ export default function UserPageRegister() {
         <div className="login-nav">
             <input type="text" placeholder="set email" onChange={(e) => setRegisterEmail(e.target.value)}/>
             <input type="text" placeholder="set password" onChange={(e) => setRegisterPassword(e.target.value)}/>
-            <Button inverted name="register" content="register" onClick={register}/>
+            <Button className="ui button on" name="register" content="register" onClick={register}/>
         </div>
     )
 

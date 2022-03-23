@@ -20,7 +20,7 @@ export default function StockItem({stock}) {
     return(
         <>
         <Table.Row>
-            <Table.Cell>{stock.ticker}</Table.Cell>
+            <Table.Cell className="ticker">{stock.ticker}</Table.Cell>
             <Table.Cell>${Math.round(stock.close)}</Table.Cell>
             <Table.Cell>{stock.qty}</Table.Cell>
             <Table.Cell>${(Math.round(stock.close * stock.qty)).toLocaleString()} </Table.Cell>
