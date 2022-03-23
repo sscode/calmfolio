@@ -1,64 +1,42 @@
 * {
     margin: 0;
+    padding: 0;
     font-family: 'Fredoka', sans-serif;
     box-sizing: border-box;
-    
-    /* background-color: #787ed6; */
-    
+    --prim: #0044ff;
+}
+
+body {
+    background: var(--prim)!important;
 }
 
 #root {
-    /* background: #FFEBD9; */
+    background-color: var(--prim);
 }
 
-.ui.form {
-    margin-top: 5rem;
+.login-nav > input {
+    margin-right: 1rem;
 }
 
-.ui.buttons .button.active {
-    background-color: #3c49ff;
+.item {
+    padding: 5rem;
+}
+
+input {
+    padding: 0.5rem; 
+    margin-right: 2rem; 
+}
+
+input[type=text]:focus {
     color: white;
-}
-
-.ui.inverted.button.logout {
-    /* background-color: #ec8c37; */
-    /* border-width: 1px; */
-}
-
-.ui.buttons .button:hover {
-    background-color: #787ed6;
-    color: white;
-}
-
-.ui.buttons .button.active:hover {
-    background-color: #3c49ff;
-    color: white;
-}
-
-.ui.inverted.top.fixed.menu {
-    background-color: #2B2C30;
-    /* margin-bottom: 5rem; */
-}
-
-
-.ui.celled.table {
-    /* background-color: #ec8c37; */
-    }
-
-
-tr {
-    /* background-color: rgb(110, 253, 210); */
-    }
+    background-color: #0044ff54;
+  }
 
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #141b35;
-}
-
-.ui.inverted.top.fixed.menu {
-
+    font-family: 'Lato';
 }
 
 .stockBar {
@@ -68,15 +46,69 @@ tr {
 
 .newStock {
     width: 100%;
-    background-color: #3c49ff;
+    /* background-color: #3c49ff; */
 }
 
 .stockList {
     margin-top: 5rem;
 }
 
-tr.table-footer {
-    background-color: #b4b4b4;
+/* UI COMPONENTS */
+
+.ui.form {
+    margin-top: 5rem;
+}
+
+/* .ui.buttons .button.active {
+    background-color: #3c49ff;
+    color: white;
+} */
+
+button.ui.button {
+    background-color: #5d5e63;
+    color: white;
+    margin-right: 1rem;
+}
+button.ui.button:hover {
+    background-color: white;
+    /* color: white; */
+}
+
+.ui.button.delete{
+    background-color: var(--prim);
+    margin: 0;
+    padding: .5rem;
+}
+.ui.button.delete:Hover{
+    background-color: #ff0000;
+    padding: .5rem;
+}
+
+.ui.inverted.top.fixed.menu {
+    background-color: #2B2C30;
+    /* margin-bottom: 5rem; */
+}
+
+
+.ui.celled.table {
+    /* background-color: var(--prim); */
     font-weight: bold;
+    border: 1px solid #ffffff;
+}
+
+
+td {
+    border: 1px solid #ffffff;
+    }
+
+
+
+.ui.inverted.top.fixed.menu {
+
+}
+
+tr.table-footer {
+    background-color: #F9FAFB;
+    font-weight: bolder;
 }
 

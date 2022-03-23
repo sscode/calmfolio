@@ -30,11 +30,11 @@ export default function UserPageRegister() {
     }
 
     return(
-        <>
+        <div className="login-nav">
             <input type="text" placeholder="set email" onChange={(e) => setRegisterEmail(e.target.value)}/>
             <input type="text" placeholder="set password" onChange={(e) => setRegisterPassword(e.target.value)}/>
-            <Button name="register" color="green" content="register" onClick={register}/>
-        </>
+            <Button inverted name="register" content="register" onClick={register}/>
+        </div>
     )
 
 }
