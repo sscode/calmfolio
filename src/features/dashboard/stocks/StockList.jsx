@@ -49,7 +49,7 @@ export default function StockList(){
             <Table celled>
                 <Table.Header>
                     <Table.Row>
-                        <Table.HeaderCell>Ticker</Table.HeaderCell>
+                        <Table.HeaderCell className="ticker">Ticker</Table.HeaderCell>
                         <Table.HeaderCell>Close</Table.HeaderCell>
                         <Table.HeaderCell>Qty</Table.HeaderCell>
                         <Table.HeaderCell>Total</Table.HeaderCell>
@@ -61,7 +61,7 @@ export default function StockList(){
                         <StockItem stock={stock} />
                     ))}
                 <Table.Row className="table-footer">
-                    <Table.Cell>Portfolio</Table.Cell>
+                    <Table.Cell className="ticker">Portfolio</Table.Cell>
                     <Table.Cell></Table.Cell>
                     <Table.Cell></Table.Cell>
                     <Table.Cell>

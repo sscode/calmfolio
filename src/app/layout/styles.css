@@ -14,6 +14,11 @@ body {
     background-color: var(--prim);
 }
 
+h1 {
+    color: white;
+    font-family: 'Inter';
+}
+
 .login-nav > input {
     margin-right: 1rem;
 }
@@ -24,19 +29,36 @@ body {
 
 input {
     padding: 0.5rem; 
-    margin-right: 2rem; 
+    margin-right: 2rem;
+    border-radius: 0.25rem; 
 }
 
 input[type=text]:focus {
-    color: white;
-    background-color: #0044ff54;
+    /* color: white; */
+    background-color: #f2ff7a;
   }
+  /* Homepage */
+.homePage {
+    color: white;
+    margin-top: 10rem;
+    margin-left: 10rem;
+}
+
+.logReg {
+    display: flex;
+    flex-direction: row;
+}
+
+  /* Stocks Dashboard */
 
 .content {
-    display: flex;
+    margin: auto;
+    width: 50%;
+    max-width: 400px;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
-    font-family: 'Lato';
+    align-items: center; */
+    /* font-family: 'Lato'; */
 }
 
 .stockBar {
@@ -50,7 +72,12 @@ input[type=text]:focus {
 }
 
 .stockList {
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
+}
+
+/* Footer */
+.logoutFooter {
+    padding-bottom: 5rem;
 }
 
 /* UI COMPONENTS */
@@ -65,13 +92,25 @@ input[type=text]:focus {
 } */
 
 button.ui.button {
-    background-color: #5d5e63;
     color: white;
     margin-right: 1rem;
 }
+button.ui.button.on {
+    color: var(--prim);
+    background-color: white;
+    /* border: 2px solid black; */
+    margin-right: 1rem;
+
+}
+
 button.ui.button:hover {
     background-color: white;
     /* color: white; */
+}
+
+button.ui.button.on:hover{
+    background-color: black;
+    color: white;
 }
 
 .ui.button.delete{
@@ -94,6 +133,11 @@ button.ui.button:hover {
     /* background-color: var(--prim); */
     font-weight: bold;
     border: 1px solid #ffffff;
+    text-align: right;
+}
+
+.ui.celled.table .ticker {
+    text-align: left;
 }
 
 
@@ -107,8 +151,22 @@ td {
 
 }
 
-tr.table-footer {
+.contact {
+    color: white;
+    font-weight: bold;
+    padding: 0.45rem 1rem;
+    border: 2.5px solid white;
+    border-radius: .25rem;
+    /* background-color: #f2ff7a; */
+}
+
+.contact:hover {
+    color: black;
+    background-color: white;
+}
+
+/* tr.table-footer {
     background-color: #F9FAFB;
     font-weight: bolder;
-}
+} */
 

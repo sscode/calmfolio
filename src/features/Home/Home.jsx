@@ -5,11 +5,12 @@ import { Button, Container, Menu } from "semantic-ui-react";
 import { auth } from "../../app/config/firebase";
 import { clearStocks } from "../dashboard/stocks/stockActions";
 import UserPageLogin from "../user/Login";
+import Logout from "../user/Logout";
 import UserPageRegister from "../user/Register";
 import { updateUser } from "../user/userActions";
 
-export default function NavBar() {
 
+export default function HomePage(){
     const dispatch = useDispatch()
     const [active, setActive] = useState(true)
     const user = useSelector(state => state.user.user.user)
@@ -26,38 +27,37 @@ export default function NavBar() {
         dispatch(clearStocks())
     }
 
-    return (
-        <Menu inverted fixed='top'>
-            <Container>
-                <Menu.Item to='/' header>
-                calmfolio
-                </Menu.Item>
-                {user ? 
-                    //if logged in
-                    <Menu.Item position='right'>
-                        <Button inverted className="logout" name="logout" onClick={logout}>logout</Button>
-                    </Menu.Item>
-                
+
+
+    return(
+        <div className="homePage">
+            <div>
+                <h1>calmfolio</h1>
+                <p>view your stocks without the stress</p>
+                <li>yesterday's close price only</li>
+                <li>no reds and greens</li>
+            </div>
+            <br></br>
+            <div>
+            {user ? 
+                //if logged in
+                <></>
                 :
                 <>
-                <Menu.Item>
                     {active ? 
-                    <>
-                    <UserPageLogin />
-                    <Button className="ui button" onClick={() => activeHandler()}>register</Button>
-                    
-                    </>
+                    <div className="logReg">
+                        <UserPageLogin />
+                        <Button inverted onClick={() => activeHandler()}>register</Button>
+                    </div>
                     : 
-                    <>
+                    <div className="logReg">
                     <UserPageRegister />
-                    <Button className="ui button" onClick={() => activeHandler()}>login</Button>
-                    
-                    </>
+                    <Button inverted onClick={() => activeHandler()}>login</Button>
+                    </div>
                     }
-                </Menu.Item> 
                 </> 
                 }
-            </Container>
-        </Menu>
+            </div>
+        </div>
     )
 }
