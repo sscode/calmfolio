@@ -30,7 +30,7 @@ export default function NavBar() {
         <Menu inverted fixed='top'>
             <Container>
                 <Menu.Item to='/' header>
-                calmfolio
+                calmfolio - yeah
                 </Menu.Item>
                 {user ? 
                 
