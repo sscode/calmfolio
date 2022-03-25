@@ -1,11 +1,10 @@
 import { signOut } from "firebase/auth";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Button, Container, Menu } from "semantic-ui-react";
+import { Button } from "semantic-ui-react";
 import { auth } from "../../app/config/firebase";
 import { clearStocks } from "../dashboard/stocks/stockActions";
 import UserPageLogin from "../user/Login";
-import Logout from "../user/Logout";
 import UserPageRegister from "../user/Register";
 import { updateUser } from "../user/userActions";
 
@@ -18,17 +17,7 @@ export default function HomePage(){
     function activeHandler(){
         setActive(!active)
     }
-
-    const logout = async () => {
-        //signout
-        await signOut(auth)
-        dispatch(updateUser(""))
-        //clear stocks
-        dispatch(clearStocks())
-    }
-
-
-
+    
     return(
         <div className="homePage">
             <div>

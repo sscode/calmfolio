@@ -21,7 +21,7 @@ export default function Logout(){
     return(
         <div className="logoutFooter">
             <Button inverted className="logout" name="logout" onClick={logout}>logout</Button>
-            <a className='contact' href="http://www.twitter.com/stusim" target="_blank">contact</a>
+            <a className='contact' href="http://www.twitter.com/stusim" target="_blank" rel="noreferrer">contact</a>
         </div>
     )
 }

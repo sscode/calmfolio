@@ -1,5 +1,4 @@
 import React from "react";
-import NavBar from "../../features/nav/NavBar";
 import StockList from "../../features/dashboard/stocks/StockList";
 import StockBar from "../../features/dashboard/stocks/StockBar";
 import { useSelector } from "react-redux";
