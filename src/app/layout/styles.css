@@ -62,13 +62,12 @@ input[type=text]:focus {
 
 @media (max-width: 600px) {
     .homePage {
-        margin-top: 2rem;
-        margin-left: 2rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
     }
     .logReg {
         display: block;
         /* flex-direction: column; */
-        background-color: #ff0000;
     }  
     button.ui.button {
         color: white;
@@ -84,7 +83,7 @@ input[type=text]:focus {
     .content {
     margin: auto;
     width: 80%;
-    /* max-width: 400px; */
+    max-width: 300px;
     }
 }
 
@@ -170,8 +169,6 @@ button.ui.button.on:hover{
 td {
     border: 1px solid #ffffff;
 }
-
-
 
 .ui.inverted.top.fixed.menu {
 
