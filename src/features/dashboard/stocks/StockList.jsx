@@ -46,7 +46,7 @@ export default function StockList(){
 
     return(
         <div className="stockList">  
-            <Table celled>
+            <Table celled unstackable>
                 <Table.Header>
                     <Table.Row>
                         <Table.HeaderCell className="ticker">Ticker</Table.HeaderCell>

@@ -28,37 +28,68 @@ h1 {
 }
 
 input {
-    padding: 0.5rem; 
+    padding: 0.75rem; 
     margin-right: 2rem;
-    border-radius: 0.25rem; 
+    border-radius: 0.25rem;
+    border:0px !important;
 }
 
 input[type=text]:focus {
     /* color: white; */
-    background-color: #f2ff7a;
+    background-color: #f1f0ff;
   }
   /* Homepage */
-.homePage {
-    color: white;
-    margin-top: 10rem;
-    margin-left: 10rem;
+  .homePage {
+      color: white;
+  }
+  
+  @media screen {
+    .homePage {
+        margin-top: 10rem;
+        margin-left: 10rem;
+    }
+    .logReg {
+        display: flex;
+        flex-direction: row;
+    }
+      /* Stocks Dashboard */
+    .content {
+        margin: auto;
+        width: 50%;
+        max-width: 400px;
+    }    
 }
 
-.logReg {
-    display: flex;
-    flex-direction: row;
-}
-
-  /* Stocks Dashboard */
-
-.content {
+@media (max-width: 600px) {
+    .homePage {
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+    .logReg {
+        display: block;
+        /* flex-direction: column; */
+        background-color: #ff0000;
+    }  
+    button.ui.button {
+        color: white;
+        margin-top: 1rem;
+    }
+    button.ui.button.on {
+        color: var(--prim);
+        background-color: white;
+        /* border: 2px solid black; */
+        /* margin-top: 1rem; */
+    }
+      /* Stocks Dashboard */
+    .content {
     margin: auto;
-    width: 50%;
-    max-width: 400px;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
-    /* font-family: 'Lato'; */
+    width: 80%;
+    /* max-width: 400px; */
+    }
+}
+
+.stockList {
+    /* margin-top: 5rem; */
 }
 
 .stockBar {
@@ -69,10 +100,6 @@ input[type=text]:focus {
 .newStock {
     width: 100%;
     /* background-color: #3c49ff; */
-}
-
-.stockList {
-    /* margin-top: 5rem; */
 }
 
 /* Footer */
@@ -100,7 +127,6 @@ button.ui.button.on {
     background-color: white;
     /* border: 2px solid black; */
     margin-right: 1rem;
-
 }
 
 button.ui.button:hover {
@@ -143,7 +169,7 @@ button.ui.button.on:hover{
 
 td {
     border: 1px solid #ffffff;
-    }
+}
 
 
 
