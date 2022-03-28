@@ -1,6 +1,8 @@
 import { signOut } from "firebase/auth";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"
 import { Button, Container, Menu } from "semantic-ui-react";
 import { auth } from "../../app/config/firebase";
 import { clearStocks } from "../dashboard/stocks/stockActions";
@@ -16,6 +18,7 @@ export default function NavBar() {
 
     function activeHandler(){
         setActive(!active)
+        toast.success("Hellos")
     }
 
     const logout = async () => {

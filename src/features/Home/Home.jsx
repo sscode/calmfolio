@@ -1,12 +1,8 @@
-import { signOut } from "firebase/auth";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Button } from "semantic-ui-react";
-import { auth } from "../../app/config/firebase";
-import { clearStocks } from "../dashboard/stocks/stockActions";
 import UserPageLogin from "../user/Login";
 import UserPageRegister from "../user/Register";
-import { updateUser } from "../user/userActions";
 
 
 export default function HomePage(){

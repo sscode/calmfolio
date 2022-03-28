@@ -4,6 +4,7 @@ import {auth} from "../../app/config/firebase.js"
 import { Button } from "semantic-ui-react"
 import { useDispatch } from "react-redux"
 import { updateUser } from "./userActions.js"
+import { toast } from "react-toastify"
 // import { useSelector } from "react-redux"
 
 
@@ -23,7 +24,9 @@ export default function UserPageLogin() {
             dispatch(updateUser(user))
             // history.push('/chat');
         } catch (error) {
+            setLoginPassword("")
             console.log(error.message)
+            toast.error("Incorrect Login information")
         }
     }
 
@@ -31,8 +34,8 @@ export default function UserPageLogin() {
     return(
         
             <div className="login-nav">
-                <input type="text" placeholder="login email" onChange={(e) => setLoginEmail(e.target.value)}/>
-                <input type="text" placeholder="login password" onChange={(e) => setLoginPassword(e.target.value)}/>
+                <input value={loginEmail} type="text" placeholder="login email" onChange={(e) => setLoginEmail(e.target.value)}/>
+                <input value={loginPassword} type="password" placeholder="login password" onChange={(e) => setLoginPassword(e.target.value)}/>
                 <Button className="ui button on" name="login" onClick={login}>login</Button>
             </div>
         
