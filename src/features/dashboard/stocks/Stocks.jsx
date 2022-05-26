@@ -8,6 +8,8 @@ import { deleteStock } from "./stockActions";
 
 export default function StockItem({stock}) {
 
+    const fake = "just for write"
+
     const dispatch = useDispatch()
     const user = useSelector(state => state.user.user.user.uid);
 
