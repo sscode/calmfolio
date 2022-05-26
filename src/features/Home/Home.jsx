@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Button } from "semantic-ui-react";
 import UserPageLogin from "../user/Login";
 import UserPageRegister from "../user/Register";
 
 
 export default function HomePage(){
-    const dispatch = useDispatch()
     const [active, setActive] = useState(true)
     const user = useSelector(state => state.user.user.user)
 

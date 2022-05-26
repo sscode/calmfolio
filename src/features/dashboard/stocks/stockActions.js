@@ -19,7 +19,6 @@ export function deleteStock(stock){
 }
 
 export function clearStocks(){
-
     return {
         type: CLEAR_STOCK,
         payload: []

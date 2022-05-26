@@ -6,7 +6,6 @@ import { fetchData } from "../../../app/api/dataApi";
 import { updatePrices } from "./stockActions";
 import { setDoc, doc } from "firebase/firestore"
 import { db } from "../../../app/config/firebase";
-import { toast } from "react-toastify";
 
 
 export default function StockBar() {
